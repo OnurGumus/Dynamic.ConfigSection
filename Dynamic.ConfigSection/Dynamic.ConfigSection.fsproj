@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OtherFlags Condition="'$(NCrunch)' == '1'">--deterministic-</OtherFlags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Impl.fs" />
+    <Compile Include="ConfigExtension.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

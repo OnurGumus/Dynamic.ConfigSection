@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2
+storage none
+nuget FSharp.Core
+nuget Hocon.Extensions.Configuration
+nuget Microsoft.Extensions.Configuration
+nuget Microsoft.NET.Test.Sdk
+nuget xunit
+nuget xunit.runner.visualstudio
