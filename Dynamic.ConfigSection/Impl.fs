@@ -2,7 +2,6 @@
 
 open System.Dynamic
 open System.Collections.Generic
-open Microsoft.Extensions.Configuration
 open System
 
     let rec replaceWithArray ( parent : ExpandoObject) (key : string)  (input : ExpandoObject option) =
@@ -27,7 +26,7 @@ open System
                           | _ -> None
                       replaceWithArray input childKey newInput
 
-      let getSection (configs : KeyValuePair<string,_> seq) section : obj =
+      let getSection (configs : KeyValuePair<string,_> seq) : obj =
           let result = ExpandoObject()
           for kvp in configs do
               let mutable parent = result :> IDictionary<_,_>
